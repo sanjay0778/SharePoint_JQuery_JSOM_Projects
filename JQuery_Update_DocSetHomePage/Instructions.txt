@@ -1,0 +1,14 @@
+1. Copy file 'DocSetHomePage.js' to folder 'C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\TEMPLATE\LAYOUTS\ProjectFolder\scripts'
+
+2. Add Script Editor web part in home page of root content type 'Custom Root Document Set'. For that click on link 'Document Set Settings' in content type then click on 'Customize the Welcome Page' link. Now you are on 'docsethomepage.aspx' page. Click on Edit Page on top left and add 'Script Editor' Web Part from 'Media and Content' category at top of the page in 'Zone2'.
+
+3. Add below script in EDIT SNIPPET of web part:
+<script type="text/javascript" src="/_layouts/15/ProjectFolder/scripts/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="/_layouts/15/ProjectFolder/scripts/DocSetHomePage.js"></script>
+<script type="text/javascript">
+_spBodyOnLoadFunctionNames.push("wrapText");
+</script>
+
+4. Stop Editing page.
+
+5. Go to content type 'Custom Root Document Set' again and click on link 'Document Set Settings'. Make sure to check 'Update the Welcome Page of Document Sets inheriting from this content type.' check box and click OK button to update welcome page of all child content types. This step can take some time as it will update all child content types.
